@@ -499,13 +499,6 @@ IDE           : Eclipse
 
 ---
 
-## 👨‍💻 Developed By
-
-**Gopinath**
-
-**Department of Computer Science and Engineering**
-
----
 
 ## 📄 License
 
