@@ -119,3 +119,43 @@ The project follows a **Layered Architecture**.
               │    MySQL      │
               │   Database    │
               └───────────────┘
+Package Structure
+
+HostelRoomAllocation
+│
+├── com.hostal.controller
+│   └── HostalController.java
+│
+├── com.hostal.model
+│   ├── students.java
+│   ├── room.java
+│   └── allocation.java
+│
+├── com.hostal.dao
+│   ├── studentsDAO.java
+│   ├── studentsDAOImpl.java
+│   ├── RoomDAO.java
+│   ├── RoomDAOImpl.java
+│   ├── allocationDAO.java
+│   └── allocationDAOImpl.java
+│
+├── com.hostal.service
+│   ├── studentService.java
+│   ├── studentServiceImpl.java
+│   ├── RoomService.java
+│   ├── RoomServiceImpl.java
+│   ├── allocationService.java
+│   └── allocationServiceImpl.java
+│
+├── com.hostal.util
+│   ├── dbconnection.java
+│   └── testconnection.java
+│
+└── com.hostal.ui
+    ├── HostelHubDashboard.java
+    ├── StudentPanel.java
+    ├── RoomPanel.java
+    ├── AllocationPanel.java
+    ├── AllocationsPanel.java
+    └── VacatePanel.java
+
