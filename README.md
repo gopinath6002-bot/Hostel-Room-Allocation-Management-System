@@ -120,7 +120,7 @@ The project follows a **Layered Architecture**.
               │   Database    │
               └──────────────--
 -----------------------------------------------------------------------------------------------------------------------------------------
-## 📦 Package Structure
+## **📦 Package Structure**
 
 The project follows a layered architecture with separate packages for the user interface, controller, model, service, DAO, and utility components.
 
