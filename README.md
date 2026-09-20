@@ -119,8 +119,12 @@ The project follows a **Layered Architecture**.
               │    MySQL      │
               │   Database    │
               └──────────────--
-## Package Structure 
+-----------------------------------------------------------------------------------------------------------------------------------------
+## 📦 Package Structure
 
+The project follows a layered architecture with separate packages for the user interface, controller, model, service, DAO, and utility components.
+
+```text
 HostelRoomAllocation
 │
 ├── com.hostal.controller
@@ -140,8 +144,8 @@ HostelRoomAllocation
 │   └── allocationDAOImpl.java
 │
 ├── com.hostal.service
-│   ├── studentService.java
-│   ├── studentServiceImpl.java
+│   ├── studentsService.java
+│   ├── studentsServiceImpl.java
 │   ├── RoomService.java
 │   ├── RoomServiceImpl.java
 │   ├── allocationService.java
@@ -158,4 +162,75 @@ HostelRoomAllocation
     ├── AllocationPanel.java
     ├── AllocationsPanel.java
     └── VacatePanel.java
+-----------------------------------------------------------------------------------------------------------------------------------------
+### 🔹 Flow Apllication
+
+```text
+User enters Student ID and Room ID
+              ↓
+       AllocationPanel
+              ↓
+     allocationService
+              ↓
+     allocationServiceImpl
+              ↓
+     allocationDAO
+              ↓
+     allocationDAOImpl
+              ↓
+            JDBC
+              ↓
+      MySQL Database
+              ↓
+     Allocation Record
+              ↓
+        Swing UI
+-----------------------------------------------------------------------------------------------------------------------------------------
+## 🔄 CRUD Operations
+
+The HostelHub system performs CRUD operations using Java, JDBC, and MySQL.
+
+```text
+                 CRUD OPERATIONS
+                       │
+        ┌──────────────┼──────────────┐
+        ↓              ↓              ↓
+      CREATE          READ          UPDATE
+        │              │              │
+   Add Student    View Students   Update Student
+   Add Room       View Rooms      Update Room
+   Allocate Room  View Allocations
+        │              │              │
+        └──────────────┼──────────────┘
+                       ↓
+                     DELETE
+                       │
+                Delete Student
+                Delete Room
+                Vacate Allocation
+------------------------------------------------------------------------------------------------------------------------------------------
+### 🔹 Database Connection
+
+```java
+Connection con = DriverManager.getConnection(
+    "jdbc:mysql://localhost:3306/hostalroomallocation",
+    "root",
+    "YOUR_PASSWORD"
+);
+------------------------------------------------------------------------------------------------------------------------------------------
+## 🚀 Future Enhancements
+
+- 🌐 Develop a web-based version of the system.
+- 📱 Create a mobile application for students and administrators.
+- 🔐 Add secure login and role-based access.
+- 📧 Add email/SMS notifications for room allocation.
+- 📊 Add advanced reports and analytics.
+- ☁️ Move the database to cloud storage.
+- 🔄 Add automatic room availability updates.
+------------------------------------------------------------------------------------------------------------------------------------------
+## 🎯 Conclusion
+
+HostelHub – Hostel Room Allocation Management System provides an efficient way to manage students, rooms, and room allocations digitally.
+
+The project uses **Java, Java Swing, JDBC, MySQL, and Layered Architecture** to provide a structured and user-friendly application. It reduces manual work, improves data management, and makes hostel room allocation easier and more organized.
 
