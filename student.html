@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Students | HostelHub</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+
+        body {
+            background: linear-gradient(135deg, #eef2ff, #e0e7ff, #f5f3ff);
+            font-family: Arial, sans-serif;
+        }
+
+        /* Sidebar */
+
+        .sidebar {
+            min-height: 100vh;
+            background: #172033;
+            color: white;
+            padding: 25px 15px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 35px;
+        }
+
+        .menu-item {
+            display: block;
+            padding: 13px 15px;
+            margin-bottom: 8px;
+            border-radius: 10px;
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .menu-item:hover,
+        .menu-item.active {
+            background: #3b82f6;
+            color: white;
+        }
+
+        .menu-item i {
+            margin-right: 12px;
+        }
+
+        /* Main */
+
+        .main {
+            padding: 30px;
+        }
+
+        /* Header */
+
+        .page-header {
+            margin-bottom: 25px;
+        }
+
+        .page-header h1 {
+            font-weight: bold;
+            color: #172033;
+        }
+
+        /* Form Card */
+
+        .form-card {
+            background: white;
+            border: none;
+            border-radius: 20px;
+            padding: 35px;
+
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+
+            max-width: 800px;
+        }
+
+        .form-icon {
+            width: 65px;
+            height: 65px;
+            border-radius: 18px;
+
+            background: #e8f0ff;
+            color: #2563eb;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 30px;
+        }
+
+        .form-control {
+            border-radius: 10px;
+            padding: 12px;
+        }
+
+        .form-control:focus {
+            box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+            border-color: #2563eb;
+        }
+
+        .btn {
+            border-radius: 10px;
+            padding: 11px 22px;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 768px) {
+
+            .sidebar {
+                min-height: auto;
+            }
+
+            .main {
+                padding: 20px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container-fluid">
+
+    <div class="row">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <div class="col-md-3 col-lg-2 sidebar">
+
+            <div class="logo">
+
+                <i class="bi bi-building"></i>
+
+                HostelHub
+
+            </div>
+
+
+            <!-- Dashboard -->
+
+            <a href="index.html" class="menu-item">
+
+                <i class="bi bi-grid"></i>
+
+                Dashboard
+
+            </a>
+
+
+            <!-- Students -->
+
+            <a href="students.html" class="menu-item active">
+
+                <i class="bi bi-people"></i>
+
+                Students
+
+            </a>
+
+
+            <!-- Rooms -->
+
+            <a href="#" class="menu-item">
+
+                <i class="bi bi-door-open"></i>
+
+                Rooms
+
+            </a>
+
+
+            <!-- Allocation -->
+
+            <a href="#" class="menu-item">
+
+                <i class="bi bi-house-check"></i>
+
+                Allocation
+
+            </a>
+
+
+            <!-- Allocations -->
+
+            <a href="#" class="menu-item">
+
+                <i class="bi bi-list-check"></i>
+
+                Allocations
+
+            </a>
+
+
+            <!-- Vacate -->
+
+            <a href="#" class="menu-item">
+
+                <i class="bi bi-box-arrow-right"></i>
+
+                Vacate Room
+
+            </a>
+
+        </div>
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <div class="col-md-9 col-lg-10 main">
+
+
+            <!-- Page Header -->
+
+            <div class="page-header">
+
+                <h1>
+
+                    Add New Student
+
+                </h1>
+
+                <p class="text-muted">
+
+                    Register a new student in HostelHub.
+
+                </p>
+
+            </div>
+
+
+            <!-- ================= FORM ================= -->
+
+            <div class="form-card">
+
+
+                <!-- Form Heading -->
+
+                <div class="d-flex align-items-center mb-4">
+
+                    <div class="form-icon me-3">
+
+                        <i class="bi bi-person-plus"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="fw-bold mb-1">
+
+                            Student Details
+
+                        </h3>
+
+                        <p class="text-muted mb-0">
+
+                            Enter the student's information below.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form>
+
+
+                    <!-- Student ID -->
+
+                    <div class="mb-3">
+
+                        <label class="form-label fw-semibold">
+
+                            Student ID
+
+                        </label>
+
+                        <input
+                            type="number"
+                            class="form-control"
+                            placeholder="Enter student ID"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Student Name -->
+
+                    <div class="mb-3">
+
+                        <label class="form-label fw-semibold">
+
+                            Student Name
+
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Enter student name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Department -->
+
+                    <div class="mb-3">
+
+                        <label class="form-label fw-semibold">
+
+                            Department
+
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Example: BSc Computer Science"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Phone -->
+
+                    <div class="mb-3">
+
+                        <label class="form-label fw-semibold">
+
+                            Phone Number
+
+                        </label>
+
+                        <input
+                            type="tel"
+                            class="form-control"
+                            placeholder="Enter 10-digit phone number"
+                            maxlength="10"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Room -->
+
+                    <div class="mb-4">
+
+                        <label class="form-label fw-semibold">
+
+                            Room ID
+
+                        </label>
+
+                        <input
+                            type="number"
+                            class="form-control"
+                            placeholder="Example: 105"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Buttons -->
+
+                    <div class="d-flex gap-2">
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary">
+
+                            <i class="bi bi-person-plus"></i>
+
+                            Add Student
+
+                        </button>
+
+
+                        <button
+                            type="reset"
+                            class="btn btn-outline-secondary">
+
+                            <i class="bi bi-arrow-clockwise"></i>
+
+                            Clear
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
