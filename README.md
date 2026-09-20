@@ -118,8 +118,8 @@ The project follows a **Layered Architecture**.
               ┌───────────────┐
               │    MySQL      │
               │   Database    │
-              └───────────────┘
-Package Structure
+              └──────────────--
+## Package Structure 
 
 HostelRoomAllocation
 │
